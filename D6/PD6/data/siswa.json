@@ -1,0 +1,21 @@
+[
+    {
+        "student": "Dsk",
+        "score": [
+            {
+                "subject": "fdjk",
+                "score": 99
+            },
+            {
+                "subject": "dflk",
+                "score": 89
+            },
+            {
+                "subject": "dfj",
+                "score": 87
+            }
+        ],
+        "avarage": 91.66666666666667,
+        "status": "pass"
+    }
+]

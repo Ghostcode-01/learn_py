@@ -1,0 +1,3 @@
+data nilai {student_name} sudah ditambahkan
+data nilai Dsk sudah ditambahkan
+Program selesai

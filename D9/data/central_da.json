@@ -1,0 +1,29 @@
+[
+    {
+        "users": [
+            {
+                "username": "ghost",
+                "password": 123456,
+                "info": {
+                    "no_rek": 433260098,
+                    "nama_pemilik": "ghost_vortex",
+                    "premium": "false",
+                    "saldo": 3255125306067594.0
+                }
+            }
+        ]
+    },
+    {
+        "admin": [
+            {
+                "username_admin": "dinda",
+                "password": 1234
+            }
+        ]
+    },
+    {
+        "finance": {
+            "saldo": 66432138711111.984
+        }
+    }
+]

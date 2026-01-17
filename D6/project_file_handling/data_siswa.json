@@ -1,0 +1,32 @@
+[
+    {
+        "nama": "Budi",
+        "nilai": [
+            {
+                "mapel": "IPA",
+                "nilai": 80
+            },
+            {
+                "mapel": "IPS",
+                "nilai": 70
+            }
+        ],
+        "rata_rata": 75.0,
+        "status": "lulus"
+    },
+    {
+        "nama": "samuel",
+        "nilai": [
+            {
+                "mapel": "matematika",
+                "nilai": 90
+            },
+            {
+                "mapel": "bahasa inggris",
+                "nilai": 90
+            }
+        ],
+        "rata_rata": 90.0,
+        "status": "lulus"
+    }
+]

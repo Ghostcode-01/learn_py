@@ -1,0 +1,228 @@
+# 1️⃣ Apa itu OOP? (Mindset dulu, jangan lompat kode)
+# OOP = cara berpikir dalam ngoding.
+# 👉 Dunia nyata = objek
+# Manusia
+# Mobil
+# HP
+# Akun Bank
+
+# 👉 Di OOP:
+# Class = cetakan / blueprint
+# Object = hasil cetakan (benda nyatanya)
+
+# Analoginya:
+# Class = Cetakan kue
+# Object = Kue yang jadi
+
+# 2️⃣ Class & Object (AKAR PALING BAWAH)
+# 🔹 Class
+
+# Class itu rancangan.
+
+class Mobil:
+    pass
+
+
+# Belum ada apa-apa, tapi blueprint sudah ada.
+# 🔹 Object
+# Object dibuat dari class.
+
+mobil1 = Mobil()
+mobil2 = Mobil()
+
+
+# ➡️ mobil1 dan mobil2 = object
+# ➡️ Mereka beda, walaupun dari class yang sama.
+# 3️⃣ Attribute (Sifat / Data)
+# Attribute = data milik object.
+
+class Mobil:
+    warna = "Merah"
+    roda = 4
+
+mobil1 = Mobil()
+print(mobil1.warna)  # Merah
+
+
+# ⚠️ Ini namanya class attribute
+# Dipakai bersama oleh semua object.
+
+# 4️⃣ init() → JANTUNG OOP ❤️
+
+# __init__ = constructor
+# Dijalankan saat object dibuat
+
+class Mobil:
+    def __init__(self, warna, merek):
+        self.warna = warna
+        self.merek = merek
+
+mobil1 = Mobil("Hitam", "Toyota")
+mobil2 = Mobil("Putih", "Honda")
+
+
+# ➡️ Sekarang tiap object punya data sendiri.
+
+# 5️⃣ self → KUNCI SUPAYA TIDAK NYASAR 🔑
+
+# self = object itu sendiri.
+
+# self.warna
+
+
+# Artinya:
+
+# warna milik object ini
+
+# Tanpa self ❌ Python bingung itu milik siapa.
+
+# 6️⃣ Method (Perilaku / Fungsi)
+
+# Method = fungsi di dalam class.
+
+class Mobil:
+    def __init__(self, warna):
+        self.warna = warna
+
+    def jalan(self):
+        print("Mobil berjalan")
+
+mobil1 = Mobil("Merah")
+mobil1.jalan()
+
+
+# ➡️ Object berperilaku
+
+# 7️⃣ Class Attribute vs Instance Attribute
+# Class Attribute
+
+# Dipakai bersama:
+
+class Mobil:
+    roda = 4
+
+# Instance Attribute
+
+# Khusus tiap object:
+
+# self.warna
+
+
+# Contoh:
+
+mobil1.roda = 6
+
+
+# ➡️ cuma mobil1 yang berubah
+# ➡️ object lain tetap 4
+
+# 8️⃣ 4 PILAR OOP (INI WAJIB KUASAI)
+# 1️⃣ Encapsulation (Pembungkusan)
+
+# Menyembunyikan data agar aman.
+
+class AkunBank:
+    def __init__(self, saldo):
+        self.__saldo = saldo
+
+akun = AkunBank(1000)
+# print(akun.__saldo) ❌ ERROR
+
+
+# __saldo = private
+
+# Akses lewat method:
+
+def get_saldo(self):
+    return self.__saldo
+
+# 2️⃣ Inheritance (Pewarisan)
+
+# Class anak mewarisi class induk.
+
+class Kendaraan:
+    def jalan(self):
+        print("Kendaraan berjalan")
+
+class Motor(Kendaraan):
+    pass
+
+motor = Motor()
+motor.jalan()
+
+
+# ➡️ Motor punya method dari Kendaraan.
+
+# 3️⃣ Polymorphism (Banyak Bentuk)
+
+# Method sama, perilaku beda.
+
+class Burung:
+    def suara(self):
+        print("Suara burung")
+
+class Ayam(Burung):
+    def suara(self):
+        print("Kukuruyuk")
+
+ayam = Ayam()
+ayam.suara()
+
+# 4️⃣ Abstraction (Konsep Tanpa Detail)
+
+# Fokus ke apa, bukan bagaimana.
+
+from abc import ABC, abstractmethod
+
+class Hewan(ABC):
+    @abstractmethod
+    def suara(self):
+        pass
+
+
+# Class turunan wajib implementasi.
+
+# 9️⃣ Kenapa OOP Penting? (Real Talk)
+
+# Tanpa OOP:
+
+# kode berantakan
+
+# susah maintenance
+
+# rawan bug
+
+# Dengan OOP:
+
+# rapi
+
+# scalable
+
+# reusable
+
+# gampang kerja tim
+
+# 🔟 Contoh MINI PROJECT (Biar Nempel)
+class User:
+    def __init__(self, username):
+        self.username = username
+
+    def login(self):
+        print(f"{self.username} berhasil login")
+
+u1 = User("samuel")
+u1.login()
+
+# Ringkasannya (Biar Otak Ngeh)
+
+# Class → cetakan
+
+# Object → hasil cetakan
+
+# Attribute → data
+
+# Method → perilaku
+
+# self → object itu sendiri
+
+# 4 Pilar OOP → wajib hafal & paham
